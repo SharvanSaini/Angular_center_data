@@ -1,0 +1,36 @@
+<p>
+  c11prod works!
+</p>
+
+
+<table class ="table table-bordered">
+    
+  <tr class="bg-danger">
+      <th>product id</th>
+      <th>catid</th>
+      <th>name</th>
+      <th>img</th>
+      <th>img</th>
+      <th>desc</th>
+      <th>price</th>
+      <th>qty</th>
+  </tr>
+
+<ng-container *ngFor="let p of products">
+  <tr *ngIf="p.catid==catid" >
+      <td>{{p.pid}}</td>
+      <td>{{p.catid}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.img}}</td>
+      <td><img height="300" width="300" src="../../assets/images/{{p.img}}"/></td>
+      <td>{{p.desc}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.qty}}</td>
+    </tr>
+    </ng-container>
+    </table>
+
+
+  <button class="bg-primary" [routerLink]="['/categories']">Go back from HTML</button>
+  <button (click)="go()" class="bg-danger">Go Back from Class</button>
+  <button (click)="goBackLoc()" class="bg-warning">Go back from class using location</button>

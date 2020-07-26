@@ -1,0 +1,238 @@
+<p>
+  c2 works!
+</p>
+<!-- <ul>
+  <li>india</li>
+  <li>usa</li>
+  <li>uk</li>
+  <br>
+  <li *ngFor ="let u of user">{{u}}</li>
+  </ul>
+
+  <div *ngIf="categories.length">
+    <table class="table table-bordered table-hover">
+      <tr class="bg-danger">
+    <th>id</th>
+    <th>name</th>
+    <th>desc</th>
+    <th>img</th>
+    <th>img</th>
+    </tr>
+    
+    <tr *ngFor="let c of categories">
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.desc}}</td>
+      <td>{{c.img}}</td>
+      <td><img src="../../assets/images/{{c.img}}"/></td>
+    
+    </tr>
+    
+    </table>
+
+    
+    </div> -->
+
+    
+<!-- <div *ngIf="categories.length==0">
+  ssssssssssssssssssss<br>
+  <p class="aler alert-danger">no item found</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  
+<div *ngIf="categories.length else falsecondn">
+  <table class ="table table-bordered">
+    
+  <tr class="bg-danger">
+      <th>id</th>
+      <th>name</th>
+      <th>desc</th>
+      <th>img</th>
+      <th>img</th>
+      
+  </tr>
+
+
+
+  <tr *ngFor="let c of categories">
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.desc}}</td>
+      <td>{{c.img}}</td>
+      <td><img src="../../assets/images/{{c.img}}"/></td>
+    
+    </tr>
+    
+    </table>
+    </div>
+
+    
+    <ng-template #falsecondn>
+      <p class="alert alert-danger">no item founddddd</p>
+      </ng-template> -->
+
+
+
+      <!-- ng for and ngif -->
+
+<!-- 
+<table class ="table table-bordered">
+    
+    <tr class="bg-danger">
+        <th>product id</th>
+        <th>catid</th>
+        <th>name</th>
+        <th>img</th>
+        <th>img</th>
+        <th>desc</th>
+        <th>price</th>
+        <th>qty</th>
+    </tr>
+
+<ng-container *ngFor="let p of products">
+    <tr *ngIf="p.price>=25000">
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td><img src="../../assets/images/{{p.img}}"/></td>
+        <td>{{p.desc}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+      </tr>
+      </ng-container>>
+      </table> -->
+
+
+
+
+
+      <!-- ngFor,ngIf,-and,or >- -->
+
+<!-- <table class ="table table-bordered">
+    
+    <tr class="bg-danger">
+        <th>product id</th>
+        <th>catid</th>
+        <th>name</th>
+        <th>img</th>
+        <th>img</th>
+        <th>desc</th>
+        <th>price</th>
+        <th>qty</th>
+    </tr>
+
+<ng-container *ngFor="let p of products">
+    <tr *ngIf="p.pid==5 && p.price>=25000 && p.catid==3 || p.pid>=6" class="bg-success">
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td><img src="../../assets/images/{{p.img}}"/></td>
+        <td>{{p.desc}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+      </tr>
+
+
+
+
+      <tr class="bg-primary" *ngIf="p.pid==6" >
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td><img src="../../assets/images/{{p.img}}"/></td>
+        <td>{{p.desc}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+      </tr>
+      </ng-container>
+      </table>   -->
+
+
+      <!-- Odd/even -->
+
+      <!-- <table class ="table table-bordered">
+        
+          <tr class="bg-warning">
+              <th>product id</th>
+              <th>catid</th>
+              <th>name</th>
+              <th>img</th>
+              <th>img</th>
+              <th>desc</th>
+              <th>price</th>
+              <th>qty</th>
+          </tr>
+      
+      <ng-container *ngFor="let p of products">
+          <tr *ngIf="p.pid%2==1"  class="bg-danger">
+              <td>{{p.pid}}</td>
+              <td>{{p.catid}}</td>
+              <td>{{p.name}}</td>
+              <td>{{p.img}}</td>
+              <td><img src="../../assets/images/{{p.img}}"/></td>
+              <td>{{p.desc}}</td>
+              <td>{{p.price}}</td>
+              <td>{{p.qty}}</td>
+            </tr>
+            <tr *ngIf="p.pid%2==0"  class="bg-primary">
+                <td>{{p.pid}}</td>
+                <td>{{p.catid}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.img}}</td>
+                <td><img src="../../assets/images/{{p.img}}"/></td>
+                <td>{{p.desc}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.qty}}</td>
+              </tr>
+            </ng-container>
+          </table>  
+     -->
+    
+    
+    
+        <!-- <br><br><br><br><br><br><br><br><br>
+          switch loop -->
+    
+          <table class ="table table-bordered">
+        
+              <tr class="bg-warning">
+                  <th>product id</th>
+                  <th>catid</th>
+                  <th>name</th>
+                  <th>img</th>
+                  <th>img</th>
+                  <th>desc</th>
+                  <th>price</th>
+                  <th>qty</th>
+              </tr>
+          
+          <ng-container *ngFor="let p of products" [ngSwitch]="p.catid">
+              <tr class="bg-success" *ngSwitchCase='1'>
+                  <td>{{p.pid}}</td>
+                  <td>{{p.catid}}</td>
+                  <td>{{p.name}}</td>
+                  <td>{{p.img}}</td>
+                  <td><img src="../../assets/images/{{p.img}}"/></td>
+                  <td>{{p.desc}}</td>
+                  <td>{{p.price}}</td>
+                  <td>{{p.qty}}</td>
+                </tr>
+    
+                <tr class="bg-warning" *ngSwitchCase='3'>
+                    <td>{{p.pid}}</td>
+                    <td>{{p.catid}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.img}}</td>
+                    <td><img src="../../assets/images/{{p.img}}"/></td>
+                    <td>{{p.desc}}</td>
+                    <td>{{p.price}}</td>
+                    <td>{{p.qty}}</td>
+                  </tr>
+    
+                </ng-container>
+                </table> 

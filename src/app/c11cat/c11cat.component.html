@@ -1,0 +1,30 @@
+<p>
+  c11cat works!
+</p>
+
+
+  <table class="table table-bordered table-hover">
+    <tr class="bg-danger">
+  <th>id</th>
+  <th>name</th>
+  <th>desc</th>
+  <th>img</th>
+  <th>img</th>
+  </tr>
+  
+  <tr *ngFor="let c of categories">
+    <td>{{c.id}}</td>
+    <!-- without querystrig -->
+     <!-- <td><a [routerLink]="['../ProdInfo']" [queryParams]="{id:c.id}">{{c.name}}</a></td>  -->
+
+    <!-- with querystrig -->
+    <td><a [routerLink]="['../ProdInfo',c.id]" >{{c.name}}</a></td>
+    <td>{{c.desc}}</td>
+    <td>{{c.img}}</td>
+    <td><img src="../../assets/images/{{c.img}}"/></td>
+  
+  </tr>
+  
+  </table>
+
+  

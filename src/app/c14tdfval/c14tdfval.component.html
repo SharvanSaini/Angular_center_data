@@ -1,0 +1,132 @@
+
+<h1 class="text-center">Template Driven Form</h1>
+
+<form #userForm="ngForm" (ngSubmit)="add(userForm.value)">
+  <div class="form-group">
+      <label>Enter Name</label>
+      <input type="text" class="form-control"  #nameRef required  ngModel name="txtname"/>
+      <strong>{{nameRef.className}}</strong>
+  </div>
+
+ <div class="form-group">
+    <label>Enter Username</label>
+    <input type="text" class="form-control"  #nameRef2 required  ngModel name="txtUnm"/>
+    <strong>{{nameRef2.className}}</strong>
+    <strong>{{nameRef2.value}}</strong>
+ </div>
+
+ <div class="form-group">
+    <label>Enter Email</label>
+    <input type="email" class="form-control" #nameRef3 required ngModel name="txtEmail"/>
+    <strong>{{nameRef3.className}}</strong>
+  </div>
+  <div class="form-group">
+    <label>Enter City</label>
+     <input type="text" class="form-control" #nameRef4="ngModel" required  ngModel name="txtCity"/>
+
+     <div *ngIf="nameRef4.invalid">
+          please enter city
+     </div>
+  </div>
+
+  <!-- NESTED JSON OBJECT -->
+<div ngModelGroup="address">
+  <div class="form-group">
+    <label>Enter State</label>
+    <input type="text" class="form-control" #nameRef5="ngModel" ngModel required name="txtState"/>
+    <!-- <strong>{{nameRef5.className}}</strong> -->
+    <div  [hidden]="nameRef5.valid " class="alert alert-danger">
+      Please enter state
+    </div>
+
+  </div>
+  <div class="form-group">
+    <label>Enter Country</label>
+    <input type="text" class="form-control" minlength="3" #nameRef6="ngModel" required ngModel name="txtCountry"/>
+    <div  [hidden]="nameRef6.valid " class="alert alert-danger">
+      Please enter country min 3 length
+    </div>
+  </div>
+
+</div>
+
+  <div class="form-group">
+
+    <input type="submit" value="Register" class="btn btn-primary"  [disabled]="userForm.form.invalid"/>
+    <button class="btn btn-success float-right">portal</button>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success float-right">new portal</button>
+  </div>
+
+</form>
+
+
+
+
+
+
+
+<!-- <h1 class="text-center">Template Driven Form</h1>
+
+<form #userForm="ngForm" (ngSubmit)="add(userForm.value)">
+  <div class="form-group">
+    <label>Enter Name</label>
+    <input type="text" class="form-control" #nameRef required ngModel name="txtname"/>
+    <strong>{{nameRef.className}}</strong>
+  </div>
+
+  <div class="form-group">
+    <label>Enter Username</label>
+    <input type="text" class="form-control" #nameRef2 required ngModel name="txtUnm"/>
+    <strong>{{nameRef2.className}}</strong>
+    <strong>{{nameRef2.value}}</strong>
+  </div>
+
+  <div class="form-group">
+    <label>Enter Email</label>
+    <input type="email" class="form-control" #nameRef3 required ngModel name="txtEmail"/>
+    <strong>{{nameRef3.className}}</strong>
+  </div>
+
+  <div class="form-group">
+    <label>Enter City</label>
+    <input type="text" class="form-control" #nameRef3 required ngModel name="txtCity"/>
+    <div *ngIf="nameRef4.invalid">
+      Please Enter City
+    </div>
+  </div> -->
+
+  <!-- Nested Json Object starts -->
+  <!-- <div ngModelGroup="address">
+    <div class="form-group">
+      <label>Enter State</label>
+      <input type="text" class="form-control" #nameRef5 ngModel name="txtState"/> -->
+      <!-- <strong>{{nameRef5.className}}</strong> -->
+      <!-- <div [hidden]="nameRef5.valid" class="alert alert-danger">
+        Please Enter State
+      </div>
+    </div>
+  
+
+  <div class="form-group">
+    <label>Enter Country</label>
+    <input type="text" class="form-control" minlength="3" #naneRef6 required ngModel name="txtCountry"/>
+    <div [hidden]="nameRef6.valid" class="alert alert-danger">
+      Please Enter Country min length 3
+    </div>
+  </div>
+
+</div> -->
+  <!-- Nested Json Object ends -->
+
+  <!-- <div class="form-group">
+    <input type="submit" value="Register" class="btn btn-primary" [disabled]="userForm.form.invalid"/>
+    <button class="btn btn-success float-right">Portal</button>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-success float-right">New Portal</button>
+  </div>
+</form> -->

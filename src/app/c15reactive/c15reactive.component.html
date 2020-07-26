@@ -1,0 +1,24 @@
+<p>
+  c15reactive works!
+</p>
+<form [formGroup]="rform" (ngSubmit)="addPost(rform.value)">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" formControlName="name"/>
+    <div *ngIf="!rform.controls['name'].valid && rform.controls['name'].touched" class="alert alert-info">
+      Please Enter Name
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea class="form-control" formControlName="description"></textarea>
+    <div *ngIf="!rform.controls['description'].valid" class="alert alert-info">
+      Please Enter min 3 characters
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input type="submit" value="Add" class="btn btn-primary" [disabled]="!rform.valid"/>
+  </div>
+</form>

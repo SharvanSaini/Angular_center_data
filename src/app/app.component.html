@@ -1,0 +1,84 @@
+<!-- <app-c1></app-c1> -->
+<!-- <app-c2></app-c2> -->
+<!-- <app-c3></app-c3> -->
+<!-- <app-c4></app-c4> -->
+<!-- <app-c5pipe></app-c5pipe> -->
+<!-- <app-c5async></app-c5async> -->
+<!-- <app-c6custom></app-c6custom>  -->
+<!-- <app-c7prod></app-c7prod> -->
+<!-- <app-c10prodio></app-c10prodio> -->
+<!-- <app-c17display></app-c17display> -->
+<!-- <app-loading></app-loading> -->
+<!-- <app-formarray></app-formarray> -->
+<div class="container">
+    <!--header start-->
+  <div class="row">
+  <header class="col-md-12">
+  <img src="../assets/images/a4.jpg">
+  </header>                    
+  </div>
+  <!--header end-->
+  
+  
+  <!--navigation starts-->
+  <div class="row">
+  <nav class="col-md-12">
+  <ul class="nav justify-content-end nav-tabs">
+  
+   <!-- <li><a href="home" class="nav-link">Home</a></li>
+  <li><a href="user" class="nav-link">Users</a></li>
+  <li><a href="products" class="nav-link">Products</a></li>
+  <li><a href="dashboard" class="nav-link">Dashboard</a></li>  -->
+  
+  <li><a [routerLink]="['/home']"      class="nav-link">Home</a></li>
+  <li><a [routerLink]="['/user']"      class="nav-link">Users</a></li>
+  <li><a [routerLink]="['/products']"  class="nav-link">Products</a></li>
+  <li><a [routerLink]="['/dashboard']"  class="nav-link">Dashboard</a></li> 
+
+  <li><a [routerLink]="['/categories']"  class="nav-link">Categories</a></li> 
+  <li><a [routerLink]="['/admin']"  class="nav-link">Admin</a></li>                           
+   <li><a [routerLink]="['/NewDashboard',{
+
+    outlets:{
+
+      rpanel:['panel'],  
+  rinfo:['info','id']
+  
+}
+ }]"  class="nav-link">New Dashboard</a></li>  
+  </ul>
+  </nav>  
+  <!--navigation ends-->
+  
+  
+  <!--main content starts-->
+  <div class='row main-content'>
+  <div class="col-md-4">
+  <ul class='nav flex-column nav-tabs'>
+    <li><a [routerLink]="['/tdf']" class="nav-link">tdf_form</a></li>
+    <li><a [routerLink]="['/tdfval']" class="nav-link">tdf_Val</a></li>
+    <li><a [routerLink]="['/reactive']" class="nav-link">Reactive_form</a></li>
+    <li><a [routerLink]="['/empform']" class="nav-link">Emp Form</a></li>
+    <li><a [routerLink]="['/LazyloadingModule']" class="nav-link" routerLinkActive="active">
+      LazyLoadingModule</a></li>
+       <li><a [routerLink]="['/Lazy']" class="nav-link" routerLinkActive="active">
+        Lazy Loading</a></li> 
+        <li><a [routerLink]="['/formArray']" class="nav-link">FormArray</a></li>
+        <li><a [routerLink]="['/image']" class="nav-link">Image upload</a></li>
+        <li><a [routerLink]="['/imagegallery']" class="nav-link">Image Gallery</a></li>
+  </ul>
+  </div>
+  
+  </div>
+  <div class="col-md-8">
+  <h4 class="text-center">Route will be loaded here</h4>
+   <router-outlet></router-outlet>
+  </div>
+  </div>
+  </div> 
+  
+
+
+
+
+  

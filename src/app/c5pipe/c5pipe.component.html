@@ -1,0 +1,96 @@
+<p>
+  c5pipe works!
+</p>
+
+
+<h1 class="text-center">welcome {{username}}</h1>
+<h1 class="text-center">welcome {{username | titlecase}}</h1>
+<table class="table table-bordered">
+<tr >
+    <th>Empno</th>
+    <th>Ename</th>
+    <th>Job</th>
+    <th>Mgr</th>
+    <th>Hiredate</th>
+    <th>Hiredate</th>
+    <th>Hiredate</th>
+    <th>Sal</th>
+    <th>Sal</th>
+    <th>Sal</th>
+    <th>Sal</th>
+    <th>Sal</th>
+    <th>Comm</th>
+    <th>Deptno</th>
+    </tr>
+
+
+<tr *ngFor="let E of emp">
+    <th >{{E.EMPNO}}</th>
+    <th>{{E.ENAME | titlecase}}</th>
+    <th>{{E.JOB}}</th>
+    <th>{{E.MGR}}</th>
+    <th>{{E.HIREDATE}}</th>
+    <th>{{E.HIREDATE |date}}</th>
+    <th>{{E.HIREDATE |date :'dd/MM/yyyy'}}</th>
+    <th>{{E.SAL | currency}}</th>
+    <th>{{E.SAL | currency :'INR'}}</th>
+    <th>{{E.SAL | currency :'INR':'code'}}</th>
+    <th>{{E.SAL| currency : 'INR':'symbol'}}</th>
+    <th>{{E.SAL}}</th>
+    <th>{{E.COMM}}</th>
+    <th>{{E.DEPTNO}}</th>
+    </tr>
+</table>
+
+<br>-------------------
+<br>-------------------
+<br>-------------------<br>
+{{emp}}
+<br>-------------------<br>
+<br>-------------------<br>
+{{emp | json}}
+<br>-------------------<br>
+<br>-------------------<br>
+<pre>{{emp | json}}</pre>
+
+Enter no of rows<br>
+<input type="text" name="txt" [(ngModel)]="limitRow"/>
+<br>
+{{limitRow}}
+
+<table class="table table-bordered">
+    <tr >
+        <th>Empno</th>
+        <th>Ename</th>
+        <th>Job</th>
+        <th>Mgr</th>
+        <th>Hiredate</th>
+        <th>Hiredate</th>
+        <th>Hiredate</th>
+        <th>Sal</th>
+        <th>Sal</th>
+        <th>Sal</th>
+        <th>Sal</th>
+        <th>Sal</th>
+        <th>Comm</th>
+        <th>Deptno</th>
+        </tr>
+    
+    
+    <tr *ngFor="let E of emp | slice : 0 :limitRow">
+        <th >{{E.EMPNO}}</th>
+        <th>{{E.ENAME | uppercase|slice:0:3}}</th>
+        <th>{{E.JOB}}</th>
+        <th>{{E.MGR}}</th>
+        <th>{{E.HIREDATE}}</th>
+        <th>{{E.HIREDATE |date}}</th>
+        <th>{{E.HIREDATE |date :'dd/MM/yyyy'}}</th>
+        <th>{{E.SAL | currency}}</th>
+        <th>{{E.SAL | currency :'INR'}}</th>
+        <th>{{E.SAL | currency :'INR':'code'}}</th>
+        <th>{{E.SAL| currency : 'INR':'symbol'}}</th>
+        <th>{{E.SAL}}</th>
+        <th>{{E.COMM}}</th>
+        <th>{{E.DEPTNO}}</th>
+        </tr>
+    </table>

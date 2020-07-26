@@ -1,0 +1,16 @@
+<p>
+  c3 works!
+</p>
+
+
+<h3 [ngClass]="'blueTheme'">hello icsd</h3>
+<h3 [ngClass]="'redTheme'">hello icsd</h3>
+<h2 [ngClass]="colorTheme">hello icsd from code</h2> 
+
+ <button (click)="changecls()">change class of css</button>
+ <h2 [ngClass]="colorTheme">this is {{usertitle}}</h2>
+
+<h1 [ngStyle]="{color:'green'}">hello icsd</h1>
+<input type="text" [(ngModel)]="colorName"/>
+{{colorName}}
+<h1 [ngStyle]="{color:colorName}">hello icsd</h1> 

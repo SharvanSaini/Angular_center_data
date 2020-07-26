@@ -1,0 +1,53 @@
+<p>
+  c6custom works!
+</p>
+
+
+
+<h1 class="text-center">{{username | custom}}</h1> 
+<h1 class="text-center">{{username | custom : 6}}</h1>
+{{emp | customjson}}
+<br>
+<br>
+<br>
+Enter name<input type="text" placeholder="type to search" [(ngModel)]="searchstring">
+{{searchstring}}
+ <br><br>
+
+ <table class="table table-bordered">
+  <tr >
+      <th>Empno</th>
+      <th>Ename</th>
+      <th>Job</th>
+      <th>Mgr</th>
+      <th>Hiredate</th>
+      <th>Hiredate</th>
+      <th>Hiredate</th>
+      <th>Sal</th>
+      <th>Sal</th>
+      <th>Sal</th>
+      <th>Sal</th>
+      <th>Sal</th>
+      <th>Comm</th>
+      <th>Deptno</th>
+      </tr>
+  
+  
+  <tr *ngFor="let E of emp | filter : 'ENAME': searchstring">
+      <th >{{E.EMPNO}}</th>
+      <th>{{E.ENAME | titlecase}}</th>
+      <th>{{E.JOB}}</th>
+      <th>{{E.MGR}}</th>
+      <th>{{E.HIREDATE}}</th>
+      <th>{{E.HIREDATE |date}}</th>
+      <th>{{E.HIREDATE |date :'dd/MM/yyyy'}}</th>
+      <th>{{E.SAL | currency}}</th>
+      <th>{{E.SAL | currency :'INR'}}</th>
+      <th>{{E.SAL | currency :'INR':'code'}}</th>
+      <th>{{E.SAL| currency : 'INR':'symbol'}}</th>
+      <th>{{E.SAL}}</th>
+      <th>{{E.COMM}}</th>
+      <th>{{E.DEPTNO}}</th>
+      </tr>
+  </table>  
+   

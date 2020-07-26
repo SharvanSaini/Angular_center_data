@@ -1,0 +1,59 @@
+<h1 class="text-center">Emp Reg Form</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form #empForm="ngForm" [formGroup]="emp"
+                      (ngSubmit)="empFormOnSubmit()">
+        
+        <div class="form-group">
+          <label>Enter Empno</label>
+          <input type="number" class="form-control" #nameRef required 
+                      value="{{empRec?.empno}}" formControlName="empno"/>
+                      <!-- <input type="number" class="form-control" #nameRef required 
+                       formControlName="empno"/> -->
+          <strong>{{nameRef.className}}</strong>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Ename</label>
+          <input type="text" class="form-control" #nameRef2 required 
+                      value="{{empRec?.ename}}" formControlName="ename"/>
+          <strong>{{nameRef2.className}}</strong>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Eage</label>
+          <input type="text" class="form-control" #nameRef3 required 
+                      value="{{empRec?.eage}}" formControlName="eage"/>
+          <strong>{{nameRef3.className}}</strong>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Eadd</label>
+          <input type="text" class="form-control" #nameRef4 required 
+                      value="{{empRec?.eadd}}" formControlName="eadd"/>
+          <strong>{{nameRef3.className}}</strong>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Esal</label>
+          <input type="text" class="form-control" #nameRef5 required 
+                      value="{{empRec?.esal}}" formControlName="esal"/>
+          <strong>{{nameRef5.className}}</strong>
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" value="Register" class="btn btn-primary" (click)="btnClickedFun('reg')" 
+                      [disabled]="empForm.form.invalid"/>
+          <input type="submit" value="Delete" class="btn btn-warning" (click)="btnClickedFun('delete')" 
+                      [disabled]="!empForm.form.invalid"/>
+          <input type="submit" value="Update" class="btn btn-secondary" (click)="btnClickedFun('update')" 
+                      [disabled]="empForm.form.invalid"/>
+          <input type="submit" value="Select" class="btn btn-success float-right" (click)="selectFun()"/>
+          <a [routerLink]="['/empSelect']">Employee Select</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<p>
+  c4 works!
+</p>
+
+<table class ="table table-bordered">
+    
+  <tr class="bg-warning">
+      <th>product id</th>
+      <th>catid</th>
+      <th>name</th>
+      <th>img</th>
+      <th>img
+<button  (click)="toggle()">Show/hide</button>
+
+
+      </th>
+      <th>desc</th>
+      <th>price</th>
+      <th>qty</th>
+  </tr>
+
+
+  <tr *ngFor="let p of products">
+      <td>{{p.pid}}</td>
+      <td>{{p.catid}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.img}}</td>
+      <td><img *ngIf="isImgVis" src="../../assets/images/{{p.img}}"  [style.width.px]="logoWidth"  [style.height.px]="logoHeight"/></td>
+      <td>{{p.desc}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.qty}}</td>
+    </tr>
+    
+    </table>
+

@@ -1,0 +1,20 @@
+<p>
+  c9ratingio works!
+</p>
+<div (click)="CountRatingFun(prodRating)">
+
+
+  
+  
+  <div *ngIf="prodRating>=5" class="bg-success">
+    {{prodRating}}Excellent
+    </div>
+    <div *ngIf="prodRating>=3 && prodRating<5 " class="bg-info">
+      {{prodRating}}good
+      </div>
+      <div *ngIf="prodRating>=2 && prodRating<3" class="bg-primary">
+        {{prodRating}}average
+        </div>
+        <div *ngIf="prodRating<2" class="bg-danger">
+          {{prodRating}}poor
+        </div>

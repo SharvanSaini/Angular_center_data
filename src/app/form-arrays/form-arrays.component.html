@@ -1,0 +1,18 @@
+<form [formGroup]="formData" (ngSubmit)="saveFormData(formData.value)">
+    <div class="fields">
+    <input type="text" placeholder="First name" formControlName="firstName">
+    </div>
+    <div class="fields">
+      <input type="text" placeholder="Last name" formControlName="lastName">
+      </div>
+      <button (click)="addAddress()">Add</button>
+    <div id="addressBlock" formArrayName="address">
+    <div *ngFor="let item of addressListArray.controls; let i = index" [formGroupName]="i">
+    <input type="text" placeholder="City" formControlName="city">
+    <input type="text" placeholder="State" formControlName="state">
+    <input type="text" placeholder="Country" formControlName="country">
+  <span (click)="removeAddress(i)">X</span> 
+  </div>
+    </div>
+    <button (click)="saveFormData()">Save</button>
+</form>

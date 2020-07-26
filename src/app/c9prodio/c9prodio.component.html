@@ -1,0 +1,41 @@
+<p>
+  c9prodio works!
+</p>
+{{currentRating}}
+<table class ="table table-bordered">
+    
+  <tr >
+      <th>product id</th>
+      <th>catid</th>
+      <th>name</th>
+      <th>img</th>
+      <th>img</th>
+      <th>desc</th>
+      <th>price</th>
+      <th>qty</th>
+      <th>rating</th>
+      <th>rating</th>
+      <th>rating</th>
+      <th>rating</th>
+  </tr>
+
+
+  <tr *ngFor="let p of products">
+      <td>{{p.pid}}</td>
+      <td>{{p.catid}}</td>
+      <td>{{p.name}}</td>
+      <td>{{p.img}}</td>
+      <td><img height="300" src="../../assets/images/{{p.img}}"/></td>
+      <td>{{p.desc}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.qty}}</td>
+      <td>{{p.rating}}</td>
+      <td><app-c7rating [prodRating]="p.rating"></app-c7rating></td>
+       <td><app-c8rating [category]="cat"></app-c8rating></td>
+
+      <td><app-c9ratingio [prodRating]="p.rating" (uRatingCount)="currentRating = $event"
+         [title]="currentRating"></app-c9ratingio></td>   
+
+    </tr>
+    
+    </table>

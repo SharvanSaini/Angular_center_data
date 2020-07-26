@@ -1,0 +1,22 @@
+<p>
+  c13info works!
+</p>
+<table class="table table-bordered">
+  <tr class="bg-danger">
+    <th>id</th>
+    <th>name</th>
+    <th>desc</th>
+    <th>img</th>
+    <th>img</th>
+  </tr>
+
+  <ng-container *ngFor="let c of categories">
+    <tr *ngIf="c.id==catid">
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.desc}}</td>
+      <td>{{c.img}}</td>
+      <td><img height="100" width="100"  src="../../assets/images/{{c.img}}"></td>
+    </tr>
+  </ng-container>
+</table>

@@ -1,0 +1,37 @@
+<p>
+  c13panel works!
+</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="text-center">Welcome to product list</h2>
+  </div>
+
+<div class="panel-body">
+<table class="table table-bordered">
+  <tr>
+    <th>product id</th>
+    <th>catid</th>
+    <th>name</th>
+    <th>img</th>
+    <th>img</th>
+    <th>desc</th>
+    <th>price</th>
+    <th>qty</th>
+  </tr>
+     
+  <tr *ngFor="let p of products">
+      <td>{{p.pid}}</td>
+      <td>{{p.catid}}</td>
+      <td><a [routerLink]="['/NewDashboard',{
+        outlets: {rinfo: ['info',p.catid]}
+        }]">
+        {{p.name}}</a></td>
+      <td>{{p.img}}</td>
+      <td><img he height="100" width="100" src="../../assets/images/{{p.img}}"></td>
+      <td>{{p.desc}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.qty}}</td>
+    </tr>
+</table>
+</div>
+</div>
